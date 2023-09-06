@@ -46,9 +46,17 @@ export default function Experience() {
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
               <p className="font-normal !mt-0">{item.location}</p>
-              <p className="!mt-1 !font-normal text-gray-700 dark:text-white/75">
-                {item.description}
-              </p>
+              {item.description.map((item) => (
+                <div key={item} className="flex items-start !mt-1">
+                  <p className="!mr-2 !font-normal text-gray-700 dark:text-white/75">
+                    {"\u2022"}
+                  </p>
+
+                  <p className=" !font-normal text-gray-700 dark:text-white/75">
+                    {item}
+                  </p>
+                </div>
+              ))}
             </VerticalTimelineElement>
           </React.Fragment>
         ))}
