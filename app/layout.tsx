@@ -11,8 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Mustafa | Personal Portfolio",
-  description:
-    "Mustafa is a frontend software engineer with over 3 years of experience.",
+  description: "Mustafa is a frontend software engineer.",
 };
 
 export default function RootLayout({
@@ -41,6 +40,11 @@ export default function RootLayout({
           href="/favicon-16x16.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css"
+        />
       </head>
 
       <body

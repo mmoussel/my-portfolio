@@ -2,6 +2,9 @@
 
 import React, { useEffect, useState, createContext, useContext } from "react";
 
+//@ts-ignore
+import WOW from "wow.js";
+
 type Theme = "light" | "dark";
 
 type ThemeContextProviderProps = {
@@ -33,6 +36,7 @@ export default function ThemeContextProvider({
   };
 
   useEffect(() => {
+    new WOW().init();
     const localTheme = window.localStorage.getItem("theme") as Theme | null;
 
     if (localTheme) {
