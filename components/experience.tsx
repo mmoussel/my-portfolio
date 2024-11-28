@@ -45,7 +45,7 @@ export default function Experience() {
               }}
             >
               <h3 className="font-semibold capitalize">{item.title}</h3>
-              <p className="font-normal !mt-0">{item.location}</p>
+              <a className="font-normal !mt-0 cursor-pointer hover:underline" href={item.companySite} target="_blank">{item.location}</a>
               {item.description.map((item) => (
                 <div key={item} className="flex items-start !mt-1">
                   <p className="!mr-2 !font-normal text-gray-700 dark:text-white/75">
